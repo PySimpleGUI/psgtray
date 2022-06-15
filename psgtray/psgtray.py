@@ -44,6 +44,7 @@ __version__ = '1.0.1'
     
     Copyright 2021 PySimpleGUI
 """
+MENU_ITEM_ATTR_KEY = 'psg_key'
 
 
 class SystemTray:
@@ -135,7 +136,8 @@ class SystemTray:
 
     # --------------------------- The methods below this point are not meant to be user callable ---------------------------
     def _on_clicked(self, icon, item: pystray.MenuItem):
-        self.window.write_event_value(self.key, item.text)
+        _val = getattr(item, MENU_ITEM_ATTR_KEY, item.text)
+        self.window.write_event_value(self.key, _val)
 
     def _convert_psg_menu_to_tray(self, psg_menu):
         menu_items = []
@@ -154,7 +156,16 @@ class SystemTray:
                         disabled = True
                         item = item[1:]
                     if not (item == pystray.Menu.SEPARATOR and sg.running_linux()):
-                        menu_items.append(pystray.MenuItem(item, self._on_clicked, enabled=not disabled, default=False))
+                        _key = None
+                        if isinstance(item, str):  # skip MenuItem object
+                            _name_key = item.split(sg.MENU_KEY_SEPARATOR, 1)
+                            if len(_name_key) == 2:
+                                item, _key = _name_key
+                        _menu_item = pystray.MenuItem(item, self._on_clicked, enabled=not disabled, default=False)
+                        if _key:
+                            setattr(_menu_item, MENU_ITEM_ATTR_KEY, _key)
+                        menu_items.append(_menu_item)
+
                 elif look_ahead != item:
                     if isinstance(look_ahead, list):
                         if menu_items is None:
