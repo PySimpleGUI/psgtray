@@ -20,6 +20,7 @@ setuptools.setup(
     keywords="GUI UI PySimpleGUI tkinter systemtray pystray",
     url="https://github.com/PySimpleGUI/psgtray",
     packages=setuptools.find_packages(),
+    python_requires=">=3.6",
     classifiers=(
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
