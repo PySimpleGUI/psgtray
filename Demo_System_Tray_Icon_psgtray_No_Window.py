@@ -20,7 +20,7 @@ from psgtray import SystemTray
     overall window event loop, a Window object is still required.  The point of this demo is to show that this
     window does not need to ever appear to the user.
 
-    Copyright PySimpleGUI 2022
+    Copyright PySimpleGUI 2022-2026
 """
 
 
