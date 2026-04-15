@@ -10,7 +10,7 @@ from PIL import Image
 import PySimpleGUI as sg
 
 
-version = '6.0.0'
+version = '6.0'
 __version__ = version.split()[0]
 
 

@@ -10,7 +10,7 @@ def readme():
 
 setuptools.setup(
     name="psgtray",
-    version="6.0.0",
+    version="6.0",
     author="PySimpleGUI",
     install_requires=["PySimpleGUI","pystray<=0.18.0","pillow"],
     python_requires=">=3.6",

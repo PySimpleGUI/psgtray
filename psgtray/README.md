@@ -7,18 +7,6 @@
 
 Adds ability to run your program in the System Tray using PySimpleGUI tkinter port
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Features
 
 * Adds System Tray Icon
@@ -26,8 +14,6 @@ Adds ability to run your program in the System Tray using PySimpleGUI tkinter po
 * Show and get menu items from system tray icon
 * Provides capability normally only available in the Qt and Wx ports of PySimpleGUI
 * Integrates with the pystray python package
-
-
 
 ## Installation
 
@@ -161,15 +147,9 @@ Currently only versions <= 0.18.0 of pystray are supported
 
 ## License & Copyright
 
-Copyright 2023-2024 PySimpleSoft, Inc. and/or its licensors.
+Copyright 2023-2026 PySimpleGUI.  All rights reserved.
 
-This is a free-to-use "Utility" and is licensed under the
-PySimpleGUI License Agreement, a copy of which is included in the
-license.txt file and also available at https://pysimplegui.com/eula.
-
-Please see Section 1.2 of the license regarding the use of this Utility,
-and see https://pysimplegui.com/faq for any questions.
-
+Licensed under LGPL3.
 
 ## Contributing
 
