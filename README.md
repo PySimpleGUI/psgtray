@@ -136,6 +136,8 @@ The Windows implementation is working well.  The Linux GTK version, not as well.
 
 Updating the Menu after initial creation is not yet supported.
 
+At the moment, customizing your menu and hotkeys is done by editing the source code.  Be careful when upgrading that you don't lose edits you have made.
+
 # Requirements
 
 In order to use this pacakge you'll also need these packages:
