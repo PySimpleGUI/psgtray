@@ -21,6 +21,7 @@ from psgtray import SystemTray
     window does not need to ever appear to the user.
 
     Copyright PySimpleGUI 2022-2026
+    LGPL3 licensed
 """
 
 

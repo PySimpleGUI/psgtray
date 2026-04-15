@@ -16,8 +16,8 @@ from psgtray import SystemTray
     
     One trick employed here is to change the window's event to be the event from the System Tray.
     
-    
     Copyright PySimpleGUI 2021-2026
+    LGPL3 licensed
 """
 
 def main():
